@@ -1,0 +1,150 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>URL Shortener</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <style>
+      * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+.bold {
+  font-weight: bold;
+}
+      
+.example {
+  color: red;
+  background-color: #ccffcc;
+}
+
+p {
+  max-width: 600px;
+}
+
+form {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: cyan;
+  display: inline-block;
+  width: 100%;
+  max-width: 340px;
+  border-radius: 3px;
+}
+
+input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+button {
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  box-shadow: 2px 2px teal;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid lightgrey;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        URL Shortener
+      </h1>
+    </header>
+
+    <main>
+    
+      <p> Pass a URL as a parameter above to receive a shortened URL in the JSON response. When you visit that shortened URL, it will redirect you to the original link.</p>
+      <p>
+        Example creation usage:
+      </p>
+<p class="example">
+  https://little-url.herokuapp.com/new/https://www.google.com
+      <br />
+  https://little-url.herokuapp.com/new/http://foo.com:80
+      </p>
+      <p>
+        Example creation output:
+      </p>
+      <p class="example">
+        { "original_url":"http://foo.com:80", "short_url":"https://little-url.herokuapp.com/8170" }
+      </p>
+      <p>
+        Usage:
+      </p>
+      <p class="example">
+        https://little-url.herokuapp.com/2871
+      </p>
+      <p>
+        Will redirect to:
+      </p>
+      <p class="example">
+        https://www.google.com/
+      </p>
+    </main>
+
+    <footer>
+      Made with <a href="https://glitch.com">Glitch</a>!
+      <br /><br />
+      <section class="technologies">Technologies Used:
+        <ul id="technologies"><li>JavaScript</li><li>HTML</li><li>CSS</li><li>MongoDB</li><li>Node</li><li>Express</li></ul>
+      </section>
+    </footer>
+    
+    
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+
+  </body>
+</html>
